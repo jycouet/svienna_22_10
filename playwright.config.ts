@@ -10,7 +10,7 @@ const config: PlaywrightTestConfig = {
 		trace: 'retain-on-failure'
 	},
 	testMatch: '**/*e2e.ts',
-	timeout: 2000
+	timeout: 5000
 };
 
 export default config;
