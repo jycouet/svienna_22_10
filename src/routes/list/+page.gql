@@ -1,0 +1,13 @@
+# example of query
+
+query ListOfPeople {
+	allPeople(first: 20) {
+		edges {
+			node {
+				id
+				name
+				skinColor
+			}
+		}
+	}
+}
