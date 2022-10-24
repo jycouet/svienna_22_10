@@ -1,12 +1,7 @@
 import { HoudiniClient, type RequestHandlerArgs } from '$houdini';
 
-async function fetchQuery({
-	fetch,
-	text = '',
-	variables = {},
-	metadata
-}: RequestHandlerArgs) {
-	const url = import.meta.env.VITE_GRAPHQL_ENDPOINT || 'https://swapi-graphql.netlify.app/.netlify/functions/index';
+async function fetchQuery({ fetch, text = '', variables = {}, metadata }: RequestHandlerArgs) {
+	const url = 'https://swapi-graphql.netlify.app/.netlify/functions/index';
 	const result = await fetch(url, {
 		method: 'POST',
 		headers: {
